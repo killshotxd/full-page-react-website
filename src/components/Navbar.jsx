@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { Fade } from "react-reveal";
 
 const Navbar = () => {
   const Nav = styled.nav`
@@ -96,33 +97,35 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <div className="menu-icon">
-        <ul className="navbar-list">
-          <li>
-            <NavLink className="navbar-link" to="/">
-              Home
-            </NavLink>
-          </li>
+      <Fade top>
+        <div className="menu-icon">
+          <ul className="navbar-list">
+            <li>
+              <NavLink className="navbar-link" to="/">
+                Home
+              </NavLink>
+            </li>
 
-          <li>
-            <NavLink className="navbar-link" to="/about">
-              About
-            </NavLink>
-          </li>
+            <li>
+              <NavLink className="navbar-link" to="/about">
+                About
+              </NavLink>
+            </li>
 
-          <li>
-            <NavLink className="navbar-link" to="/services">
-              Services
-            </NavLink>
-          </li>
+            <li>
+              <NavLink className="navbar-link" to="/services">
+                Services
+              </NavLink>
+            </li>
 
-          <li>
-            <NavLink className="navbar-link" to="/contact">
-              Contact
-            </NavLink>
-          </li>
-        </ul>
-      </div>
+            <li>
+              <NavLink className="navbar-link" to="/contact">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </Fade>
     </Nav>
   );
 };

@@ -3,12 +3,15 @@ import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 import styled from "styled-components";
 import Logo from "../assets/logo.svg";
+import { Fade } from "react-reveal";
 
 const Header = () => {
   return (
     <MainHeader>
       <NavLink to="/">
-        <img src={Logo} alt="logo" className="logo" />
+        <Fade top>
+          <img src={Logo} alt="logo" className="logo" />
+        </Fade>
       </NavLink>
       <Navbar />
     </MainHeader>

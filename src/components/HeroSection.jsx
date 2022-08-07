@@ -2,27 +2,32 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "../styles/Button";
 import { NavLink } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
 const HeroSection = () => {
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
-        <div className="section-hero-data">
-          <p className="hero-top-data">THIS IS ME</p>
-          <h1 className="hero-heading">MOHD HASSAN</h1>
-          <p className="hero-para">
-            I'm Mohd Hassan. A passionate frontend developer
-          </p>
-          <Button className="btn hireme-btn">
-            <NavLink to="/contact">Hire Me</NavLink>
-          </Button>
-        </div>
+        <Fade left>
+          <div className="section-hero-data">
+            <p className="hero-top-data">THIS IS ME</p>
+            <h1 className="hero-heading">MOHD HASSAN</h1>
+            <p className="hero-para">
+              I'm Mohd Hassan. A passionate frontend developer
+            </p>
+            <Button className="btn hireme-btn">
+              <NavLink to="/contact">Hire Me</NavLink>
+            </Button>
+          </div>
+        </Fade>
 
-        <div className="section-hero-image">
-          <picture>
-            <img src="./images/hero.svg" alt="" className="hero-img" />
-          </picture>
-        </div>
+        <Fade right>
+          <div className="section-hero-image">
+            <picture>
+              <img src="./images/hero.svg" alt="" className="hero-img" />
+            </picture>
+          </div>
+        </Fade>
       </div>
     </Wrapper>
   );
