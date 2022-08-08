@@ -3,8 +3,11 @@ import styled from "styled-components";
 import { Button } from "../styles/Button";
 import { NavLink } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+import { useGlobalContext } from "../context";
 
 const HeroSection = ({ name, image }) => {
+  const { fname, age } = useGlobalContext();
+
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
@@ -13,7 +16,7 @@ const HeroSection = ({ name, image }) => {
             <p className="hero-top-data">THIS IS ME</p>
             <h1 className="hero-heading">{name}</h1>
             <p className="hero-para">
-              I'm Mohd Hassan. A passionate frontend developer
+              I'm {fname} {age}. A passionate frontend developer
             </p>
             <Button className="btn hireme-btn">
               <NavLink to="/contact">Hire Me</NavLink>
