@@ -4,14 +4,14 @@ import { Button } from "../styles/Button";
 import { NavLink } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 
-const HeroSection = () => {
+const HeroSection = ({ name, image }) => {
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
         <Fade left>
           <div className="section-hero-data">
             <p className="hero-top-data">THIS IS ME</p>
-            <h1 className="hero-heading">MOHD HASSAN</h1>
+            <h1 className="hero-heading">{name}</h1>
             <p className="hero-para">
               I'm Mohd Hassan. A passionate frontend developer
             </p>
@@ -24,7 +24,7 @@ const HeroSection = () => {
         <Fade right>
           <div className="section-hero-image">
             <picture>
-              <img src="./images/hero.svg" alt="" className="hero-img" />
+              <img src={image} alt="" className="hero-img" />
             </picture>
           </div>
         </Fade>
