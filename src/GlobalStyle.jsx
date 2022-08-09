@@ -9,7 +9,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 html {
   font-size: 62.5%;
- scroll-behavior: smooth;
+  
+//  scroll-behavior: smooth;
   /* 1rem = 10px */
   overflow-x: hidden;
 }
@@ -26,6 +27,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
    background-color: rgb(24 24 29);
+   width: 5px
 }
 
 body::-webkit-scrollbar-thumb {
